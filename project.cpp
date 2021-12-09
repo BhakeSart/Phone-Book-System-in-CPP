@@ -322,7 +322,7 @@ int main()
                 cin >> ans;
             } while (ans == 'y');
 
-            break;
+            break; 
         default:
             cout << "\nNo Proper Input Given..\n";
         }
