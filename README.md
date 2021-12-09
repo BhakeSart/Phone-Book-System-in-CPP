@@ -19,4 +19,6 @@ This Project is a Phone Book Management System which is developed in C++ using D
 	3. Search by E-mail.
 
 
-## Snippets of Code 
+## Snippets of Code
+
+## Output
