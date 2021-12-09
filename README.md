@@ -1,5 +1,5 @@
 
-# Phone-Book-System-in-cpp
+# Phone-Book-System-in-CPP
 
 This Project is a Phone Book Management System which is developed in C++ using Doubly Linked Lists. It was developed as a Course Project for Data Structures and Algorithms in my 3rd Semester of College.
 
