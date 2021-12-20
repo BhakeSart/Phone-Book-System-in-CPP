@@ -277,14 +277,14 @@ int main()
 
         case 2:
             d1.insert();
-            d1.sort();
+            
             break;
 
         case 3:
             cout << "\n\nEnter the name of the Person whose Details you want to update..\n";
             cin >> n;
             d1.update(n);
-            d1.sort();
+           
             break;
 
         case 4:
