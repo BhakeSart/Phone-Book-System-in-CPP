@@ -14,6 +14,18 @@ This Project is a Phone Book Management System which is developed in C++ using D
 3. Updating Details on Exisiting Contact.
 4. Deleting a Contact.
 5. Searching a Contact. -- Search by Number , Search by Name and Search by Email.
+
+
+## Functions defined in the Code.
+1. void insert();
+2. void sort();
+3. void deletecontact();
+4. void searchbyname();
+5. void searchbynumber();
+6. void searchbyemail();
+7. void accept();
+8. void display();
+9. void update();
 	
 
 
