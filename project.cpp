@@ -1,13 +1,16 @@
 
+// ADS Course Project.
+
 #include <iostream>
 #include <cstring>
 using namespace std;
+
 class dnode
 {
 public:
-    char number[50];
-    char email[40];
-    char name[30];
+    char number[100];
+    char email[100];
+    char name[100];
     dnode *prev, *next;
     dnode(char n[100], char r[100], char g[100])
     {
@@ -19,13 +22,11 @@ public:
     }
     friend class dlist;
 };
+
 class dlist
 {
     dnode *head, *temp, *ptr;
-    dnode *ptr1, *ptr2, *dup;
-
 public:
-    dnode *prevn;
     void insert();
     void sort();
     void deletecontact(char n[100]);
@@ -34,17 +35,16 @@ public:
     void searchbyemail(char g[100]);
     void accept();
     void display();
-    void update(char ch[10]);
+    void update(char ch[100]);
     dlist()
     {
         head = NULL;
         temp = NULL;
         ptr = NULL;
-        ptr1 = NULL;
-        ptr2 = NULL;
-        dup = NULL;
+        
     }
 };
+
 
 void dlist::accept()
 {
@@ -113,11 +113,17 @@ void dlist::sort()
                 strcpy(i->name, j->name);
                 strcpy(j->name, n);
             }
+            else
+            {
+                strcpy(n, j->name);
+                strcpy(j->name, i->name);
+                strcpy(i->name, n);
+            }
         }
     }
 }
 
-void dlist::deletecontact(char s[20])
+void dlist::deletecontact(char s[100])
 {
     int c = 0;
     ptr = head;
@@ -130,7 +136,7 @@ void dlist::deletecontact(char s[20])
         }
         else
         {
-            c = 2;
+            c = -1;
         }
         ptr = ptr->next;
     }
@@ -155,13 +161,13 @@ void dlist::deletecontact(char s[20])
         delete (ptr);
         cout << "Your Contact is successfully deleted\n\n";
     }
-    if (c == 2)
+    if (c == -1)
     {
-        cout << "Your Entered Name is on in list...";
+        cout << "Your Entered Name is not in the list...";
     }
 }
 
-void dlist::searchbyname(char na[10])
+void dlist::searchbyname(char na[100])
 {
     ptr = head;
     while (ptr != NULL)
@@ -175,10 +181,14 @@ void dlist::searchbyname(char na[10])
             cout << "\nNumber ::\t+91-" << ptr->number;
             cout << "\nE-mail ID ::\t" << ptr->email;
         }
+        else
+        {
+            cout<<"Contact not found!!\n";
+        }
         ptr = ptr->next;
     }
 }
-void dlist::searchbynumber(char num[20])
+void dlist::searchbynumber(char num[100])
 {
     ptr = head;
     while (ptr != NULL)
@@ -193,10 +203,14 @@ void dlist::searchbynumber(char num[20])
             cout << "\nNumber ::\t+91-" << ptr->number;
             cout << "\nE-mail ID ::\t" << ptr->email;
         }
+        else
+        {
+            cout<<"Contact not found!!\n";
+        }
         ptr = ptr->next;
     }
 }
-void dlist::searchbyemail(char em[20])
+void dlist::searchbyemail(char em[100])
 {
     ptr = head;
     while (ptr != NULL)
@@ -211,10 +225,14 @@ void dlist::searchbyemail(char em[20])
             cout << "\nNumber ::\t+91-" << ptr->number;
             cout << "\nE-mail ID ::\t" << ptr->email;
         }
+        else
+        {
+            cout<<"Contact not found!!\n";
+        }
         ptr = ptr->next;
     }
 }
-void dlist::update(char n[20])
+void dlist::update(char n[100])
 {
     char ans;
     int c;
@@ -251,18 +269,17 @@ void dlist::update(char n[20])
 }
 int main()
 {
-    char n[20];
-    char nam[20];
-    char name[10];
-    char number[10];
-    char email[20];
+    char n[100];
+    char name[100];
+    char number[100];
+    char email[100];
     dlist d1;
     char ans;
     int ch, a;
     cout << "\n\n******************Phone Book Management System - By ETD_03 Group******************";
     cout << "\n\nPlease Enter Your Name:- ";
-    cin.getline(name, 20);
-    cout << "\n\nWelcome " << name << ",Let's make your own PhoneBook\n\n";
+    cin.getline(name, 100);
+    cout << "\n\nWelcome " << name <<", Let's make your own PhoneBook\n\n";
     d1.accept();
     d1.sort();
     do
@@ -322,11 +339,11 @@ int main()
                 cin >> ans;
             } while (ans == 'y');
 
-            break; 
+            break;
         default:
             cout << "\nNo Proper Input Given..\n";
         }
         cout << "\n\nDo you want to continue operations(y/n):-";
         cin >> ans;
     } while (ans == 'y');
-}
+} 
