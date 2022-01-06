@@ -4,9 +4,9 @@
 This Project is a Phone Book Management System which is developed in C++ using Doubly Linked Lists. It was developed as a Course Project for Data Structures and Algorithms in my 3rd Semester of College.
 
 ## Primitive Operations Doubly Linked Lists can Perform 
-1. Searching. 
-2. Sorting. 
-3. Deletion.
+1. Searching. -- O(n)
+2. Sorting. -- O(n*log n)
+3. Deletion. -- O(n)
 
 ## 5 Features of this Project.
 1. Displaying Saved Contacts.
