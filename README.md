@@ -29,7 +29,5 @@ This Project is a Phone Book Management System which is developed in C++ using D
 	
 
 
-## Output
 
-![The Output of the Code.]("C:\Users\Sarthak\Pictures\Screenshot 2022-01-23 160334.jpg" "The Output")
 
