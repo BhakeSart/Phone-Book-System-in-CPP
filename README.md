@@ -29,6 +29,4 @@ This Project is a Phone Book Management System which is developed in C++ using D
 	
 
 
-## Snippets of Code
-
 ## Output
